@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://developer.intuit.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" targetNamespace="http://developer.intuit.com/" elementFormDefault="qualified">
+    <xsd:element name="serverVersion">
+        <xsd:complexType>
+            <xsd:sequence/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="serverVersionResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="serverVersionResult" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="clientVersion">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="strVersion" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="clientVersionResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="clientVersionResult" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="authenticate">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="strUserName" type="xsd:string"/>
+                <xsd:element name="strPassword" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <xsd:complexType name="ArrayOfString">
+        <xsd:sequence>
+            <xsd:element name="string" type="xsd:string" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name="authenticateResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="authenticateResult" type="tns:ArrayOfString"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="connectionError">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="ticket" type="xsd:string"/>
+                <xsd:element name="hresult" type="xsd:string"/>
+                <xsd:element name="message" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="connectionErrorResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="connectionErrorResult" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="sendRequestXML">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="ticket" type="xsd:string"/>
+                <xsd:element name="strHCPResponse" type="xsd:string"/>
+                <xsd:element name="strCompanyFileName" type="xsd:string"/>
+                <xsd:element name="qbXMLCountry" type="xsd:string"/>
+                <xsd:element name="qbXMLMajorVers" type="xsd:int"/>
+                <xsd:element name="qbXMLMinorVers" type="xsd:int"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="sendRequestXMLResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="sendRequestXMLResult" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="receiveResponseXML">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="ticket" type="xsd:string"/>
+                <xsd:element name="response" type="xsd:string"/>
+                <xsd:element name="hresult" type="xsd:string"/>
+                <xsd:element name="message" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="receiveResponseXMLResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="receiveResponseXMLResult" type="xsd:int"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="getLastError">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="ticket" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="getLastErrorResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="getLastErrorResult" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="closeConnection">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="ticket" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="closeConnectionResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="closeConnectionResult" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

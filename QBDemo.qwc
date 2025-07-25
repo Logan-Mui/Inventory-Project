@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<QBWCXML>
+<AppName>LBMDemo</AppName>
+<AppID></AppID>
+<AppURL>http://localhost:8080/ws/</AppURL>
+<AppDescription>A demo application for LBM Inventory Management</AppDescription>
+<AppSupport>http://developer.intuit.com</AppSupport>
+<UserName>User</UserName>
+<OwnerID>{90A44FB5-33D9-4815-AC85-AC86A7E7D1EB}</OwnerID>
+<FileID>{57F3B9B6-86F1-4FCC-B1FF-967DE1813D20}</FileID>
+<QBType>QBFS</QBType>
+<Scheduler>
+<RunEveryNSeconds>10</RunEveryNSeconds>
+</Scheduler>
+</QBWCXML>
